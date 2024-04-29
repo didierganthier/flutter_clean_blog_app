@@ -5,6 +5,7 @@ import 'package:flutter_clean_blog_app/features/auth/presentation/widgets/auth_f
 import 'package:flutter_clean_blog_app/features/auth/presentation/widgets/auth_gradient_button.dart';
 
 class SignupPage extends StatefulWidget {
+  static route() => MaterialPageRoute(builder: (context) => const SignupPage());
   const SignupPage({super.key});
 
   @override
@@ -64,9 +65,7 @@ class _SignupPageState extends State<SignupPage> {
               GestureDetector(
                 onTap: () => Navigator.push(
                   context,
-                  MaterialPageRoute(
-                    builder: (context) => const LoginPage(),
-                  ),
+                  LoginPage.route(),
                 ),
                 child: RichText(
                   text: TextSpan(
