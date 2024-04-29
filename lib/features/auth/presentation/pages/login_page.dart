@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_clean_blog_app/core/theme/app_pallete.dart';
+import 'package:flutter_clean_blog_app/features/auth/presentation/pages/signup_page.dart';
 import 'package:flutter_clean_blog_app/features/auth/presentation/widgets/auth_field.dart';
 import 'package:flutter_clean_blog_app/features/auth/presentation/widgets/auth_gradient_button.dart';
 
@@ -55,19 +56,28 @@ class _LoginPageState extends State<LoginPage> {
                 buttonText: 'Sign in',
               ),
               const SizedBox(height: 20),
-              RichText(
-                text: TextSpan(
-                  text: 'Don\'t have an account?',
-                  style: Theme.of(context).textTheme.titleMedium,
-                  children: [
-                    TextSpan(
-                      text: 'Sign Up',
-                      style: Theme.of(context).textTheme.titleMedium?.copyWith(
-                            color: AppPallete.gradient2,
-                            fontWeight: FontWeight.bold,
-                          ),
-                    ),
-                  ],
+              GestureDetector(
+                onTap: () => Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => const SignupPage(),
+                  ),
+                ),
+                child: RichText(
+                  text: TextSpan(
+                    text: 'Don\'t have an account?',
+                    style: Theme.of(context).textTheme.titleMedium,
+                    children: [
+                      TextSpan(
+                        text: 'Sign Up',
+                        style:
+                            Theme.of(context).textTheme.titleMedium?.copyWith(
+                                  color: AppPallete.gradient2,
+                                  fontWeight: FontWeight.bold,
+                                ),
+                      ),
+                    ],
+                  ),
                 ),
               ),
             ],
