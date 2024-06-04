@@ -1,4 +1,4 @@
-import 'package:flutter_clean_blog_app/core/error/failure.dart';
+import 'package:flutter_clean_blog_app/core/error/failures.dart';
 import 'package:fpdart/fpdart.dart';
 
 /// Interface for the authentication repository.
