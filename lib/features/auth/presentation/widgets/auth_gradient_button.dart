@@ -3,10 +3,12 @@ import 'package:flutter_clean_blog_app/core/theme/app_pallete.dart';
 
 class AuthGradientButton extends StatelessWidget {
   final String buttonText;
+  final VoidCallback onPressed;
 
   const AuthGradientButton({
     Key? key,
-    this.buttonText = 'Sign Up',
+    required this.buttonText,
+    required this.onPressed,
   }) : super(key: key);
 
   @override
