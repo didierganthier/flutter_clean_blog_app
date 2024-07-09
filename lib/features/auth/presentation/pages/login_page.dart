@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_clean_blog_app/core/theme/app_pallete.dart';
+import 'package:flutter_clean_blog_app/features/auth/presentation/bloc/auth_bloc.dart';
 import 'package:flutter_clean_blog_app/features/auth/presentation/pages/signup_page.dart';
 import 'package:flutter_clean_blog_app/features/auth/presentation/widgets/auth_field.dart';
 import 'package:flutter_clean_blog_app/features/auth/presentation/widgets/auth_gradient_button.dart';
@@ -53,8 +55,16 @@ class _LoginPageState extends State<LoginPage> {
                 isObscureText: true,
               ),
               const SizedBox(height: 20),
-              const AuthGradientButton(
+              AuthGradientButton(
                 buttonText: 'Sign in',
+                onPressed: () {
+                  // context.read<AuthBloc>().add(
+                  //       AuthSignIn(
+                  //         email: emailController.text,
+                  //         password: passwordController.text,
+                  //       ),
+                  //     );
+                },
               ),
               const SizedBox(height: 20),
               GestureDetector(
